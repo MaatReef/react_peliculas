@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { get }  from "../data/httpClient"
-import {MovieCard} from "../components/MovieCard"
+import { MovieCard } from "../components/MovieCard"
 import "./ContextMovieCard.css";
 
 export function ContextMovieCard(){
@@ -15,7 +15,7 @@ export function ContextMovieCard(){
     return (
         <ul className="container">
             {movies.map((movie) => (
-                <MovieCard movie={movie}/>
+                <MovieCard key={movie.id} movie={movie}/>
             ))}
         </ul>
     );
